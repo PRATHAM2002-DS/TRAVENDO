@@ -1,7 +1,7 @@
 import express from 'express';
 // import dotenv from 'dotenv';
 import Connection from './database/db.js';
-import DefaultData from './default.js';
+// import DefaultData from './default.js';
 import Routes from './routes/route.js';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -22,9 +22,10 @@ const app=express();
 
 
 
+
 Connection();
 app.listen(PORT,()=>console.log(`Server is successfully running on PORT ${PORT}`));
-DefaultData();
+// DefaultData();
 
 
 app.use(bodyParser.json({ extended: true }));
